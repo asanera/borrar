@@ -1,0 +1,13 @@
+<input type="number" [(ngModel)]="numAlbum" />
+<input type="button" value="Buscar" (click)="buscarFotos()" />
+
+<div>
+  <input type="radio" [(ngModel)]="ver" [value]="true">Mostrar
+  <input type="radio"[(ngModel)]="ver" [value]="false">No mostrar
+</div>
+
+<div *ngIf="ver">
+<ul>
+  <li *ngFor="let c of lista">{{c.title}}></li>
+</ul> 
+</div>
